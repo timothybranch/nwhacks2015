@@ -6,5 +6,5 @@ package ubc.nwhacks2015;
  */
 
 public class Game {
-    //Nothing is here yet.
+  public Game(String name) {}
 }
