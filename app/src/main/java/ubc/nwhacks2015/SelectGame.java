@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-
+// gets all nearby games and joins one
 public class SelectGame extends ActionBarActivity {
 
     @Override

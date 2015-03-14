@@ -5,6 +5,9 @@ package ubc.nwhacks2015;
  * Tentative.
  */
 
+import java.io.Serializable;
+
 public class Game {
+  private String name;
   public Game(String name) {}
 }

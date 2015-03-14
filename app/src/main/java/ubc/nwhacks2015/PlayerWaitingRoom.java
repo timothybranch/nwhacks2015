@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+// needs to display the list of other players
 
 public class PlayerWaitingRoom extends ActionBarActivity {
 

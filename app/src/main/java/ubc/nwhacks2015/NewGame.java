@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class NewGame extends ActionBarActivity {
@@ -18,8 +19,12 @@ public class NewGame extends ActionBarActivity {
         Button buttonCreate = (Button) findViewById(R.id.buttonCreate);
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent startGame = new Intent(view.getContext(), WaitingRoom.class);
-                startActivityForResult(startGame, 0);
+                // new game initialized here
+                Intent newGame = new Intent(view.getContext(), WaitingRoom.class);
+                startActivityForResult(newGame, 0);
+                TextView nameOfGame = (TextView) findViewById(R.id.nameOfGame);
+                String name = nameOfGame.getText().toString();
+                Game myGame = new Game(name);
             }
         });
     }

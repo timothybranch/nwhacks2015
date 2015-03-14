@@ -1,5 +1,6 @@
 package ubc.nwhacks2015;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /*
@@ -7,7 +8,8 @@ import java.util.ArrayList;
  * Stores data such as hand, whether they are the czar or not, and score.
  */
 
-public class Player {
+@SuppressWarnings("serial") //with this annotation we are going to hide compiler warning
+public class Player { // needed to pass objects from one activity to another
 
     private int myID;
     private String myName;
@@ -16,11 +18,13 @@ public class Player {
     private ArrayList<CardWhite> mySelection;
     private CardWhite myChoice;
     private int myScore = 0;
+    private Game game;
 
-    public Player(int id, String name, ArrayList<CardWhite> startingHand){
+    public Player(int id, String name, ArrayList<CardWhite> startingHand, Game g) {
         this.myID = id;
         this.myName = name;
         this.myHand = startingHand;
+        this.game = g;
     }
 
     public int getID(){
@@ -70,7 +74,5 @@ public class Player {
     public CardWhite getChoice(){
         return myChoice;
     }
-
-
 
 }

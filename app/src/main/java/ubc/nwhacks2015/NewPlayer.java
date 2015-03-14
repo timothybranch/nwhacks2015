@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.TextView;
 
 public class NewPlayer extends ActionBarActivity {
 
@@ -18,7 +18,11 @@ public class NewPlayer extends ActionBarActivity {
         Button create = (Button) findViewById(R.id.buttonCreatePlayer);
         create.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                // Player initialized here
+                TextView nameOfPlayer = (TextView) findViewById(R.id.nameOfPlayer);
+                String name = nameOfPlayer.getText().toString();
                 Intent newPlayer = new Intent(view.getContext(), SelectGame.class);
+                newPlayer.putExtra("String", name);
                 startActivityForResult(newPlayer, 0);
             }
         });
