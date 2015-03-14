@@ -1,34 +1,24 @@
 package ubc.nwhacks2015;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class SelectGame extends ActionBarActivity {
+public class CardCzar extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_game);
-        Button buttonJoin = (Button) findViewById(R.id.buttonJoin);
-        buttonJoin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent joinGame = new Intent(view.getContext(), PlayerWaitingRoom.class);
-                startActivityForResult(joinGame, 0);
-            }
-        });
+        setContentView(R.layout.activity_card_czar);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_select_game, menu);
+        getMenuInflater().inflate(R.menu.menu_card_czar, menu);
         return true;
     }
 

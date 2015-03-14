@@ -7,19 +7,41 @@
     tools:context="ubc.nwhacks2015.GameRoom"
     android:id="@+id/gameRoom">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/buttonSubmit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView4"
+        android:text="The Black Card"
+        android:id="@+id/blackCard"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <HorizontalScrollView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/horizontalScrollView"
-        android:layout_alignParentBottom="true" />
+        android:id="@+id/listDeck"
+        android:choiceMode="multipleChoiceModal"
+        android:layout_above="@+id/buttonSubmit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/blackCard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Points"
+        android:id="@+id/textPoints"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -9,4 +9,5 @@
     <string name="title_activity_waiting_room">WaitingRoom</string>
     <string name="title_activity_game_room">GameRoom</string>
     <string name="title_activity_player_waiting_room">PlayerWaitingRoom</string>
+    <string name="title_activity_card_czar">CardCzar</string>
 </resources>

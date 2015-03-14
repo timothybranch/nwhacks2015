@@ -40,6 +40,10 @@
             android:name=".PlayerWaitingRoom"
             android:label="@string/title_activity_player_waiting_room" >
         </activity>
+        <activity
+            android:name=".CardCzar"
+            android:label="@string/title_activity_card_czar" >
+        </activity>
     </application>
 
 </manifest>

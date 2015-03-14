@@ -30,4 +30,19 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Your Name"
+        android:id="@+id/hostName"
+        android:layout_below="@+id/nameOfGame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:editable="true"
+        android:elegantTextHeight="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
 </RelativeLayout>
