@@ -9,25 +9,17 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class NewGame extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button buttonNew = (Button) findViewById(R.id.buttonNew);
-        buttonNew.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_new_game);
+        Button buttonCreate = (Button) findViewById(R.id.buttonCreate);
+        buttonCreate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent initializeGame = new Intent(view.getContext(), NewGame.class);
-                startActivityForResult(initializeGame, 0);
-            }
-        });
-
-        Button buttonJoin = (Button) findViewById(R.id.buttonJoin);
-        buttonJoin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent joinGame = new Intent(view.getContext(), NewPlayer.class);
-                startActivityForResult(joinGame, 0);
+                Intent startGame = new Intent(view.getContext(), WaitingRoom.class);
+                startActivityForResult(startGame, 0);
             }
         });
     }
@@ -36,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_new_game, menu);
         return true;
     }
 

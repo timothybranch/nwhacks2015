@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_new_game">NewGame</string>
+    <string name="title_activity_new_player">NewPlayer</string>
+    <string name="title_activity_select_game">SelectGame</string>
+    <string name="title_activity_waiting_room">WaitingRoom</string>
+    <string name="title_activity_game_room">GameRoom</string>
+    <string name="title_activity_player_waiting_room">PlayerWaitingRoom</string>
 </resources>

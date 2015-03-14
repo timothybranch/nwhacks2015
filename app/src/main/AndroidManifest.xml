@@ -16,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NewGame"
+            android:label="@string/title_activity_new_game" >
+        </activity>
+        <activity
+            android:name=".NewPlayer"
+            android:label="@string/title_activity_new_player" >
+        </activity>
+        <activity
+            android:name=".SelectGame"
+            android:label="@string/title_activity_select_game" >
+        </activity>
+        <activity
+            android:name=".WaitingRoom"
+            android:label="@string/title_activity_waiting_room" >
+        </activity>
+        <activity
+            android:name=".GameRoom"
+            android:label="@string/title_activity_game_room" >
+        </activity>
+        <activity
+            android:name=".PlayerWaitingRoom"
+            android:label="@string/title_activity_player_waiting_room" >
+        </activity>
     </application>
 
 </manifest>
