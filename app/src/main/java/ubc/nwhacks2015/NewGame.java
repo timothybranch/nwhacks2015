@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 
 public class NewGame extends ActionBarActivity {
@@ -22,7 +22,7 @@ public class NewGame extends ActionBarActivity {
                 // new game initialized here
                 Intent newGame = new Intent(view.getContext(), WaitingRoom.class);
                 startActivityForResult(newGame, 0);
-                TextView nameOfGame = (TextView) findViewById(R.id.nameOfGame);
+                EditText nameOfGame = (EditText) findViewById(R.id.nameOfGame);
                 String name = nameOfGame.getText().toString();
                 Game myGame = new Game(name);
             }
