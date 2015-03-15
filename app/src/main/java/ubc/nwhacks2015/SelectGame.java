@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 // gets all nearby games and joins one
 public class SelectGame extends ActionBarActivity {
@@ -48,6 +49,8 @@ public class SelectGame extends ActionBarActivity {
     }
 
     public void joinGame(){
-
+        EditText text = (EditText) findViewById(R.id.name);
+        String name = text.getText().toString();
+        Player player = new Player(name);
     }
 }
