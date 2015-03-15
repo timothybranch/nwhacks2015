@@ -5,9 +5,19 @@ package ubc.nwhacks2015;
  * Tentative.
  */
 
-import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Game {
   private String name;
-  public Game(String name) {}
+  private ArrayList<Player> players = new ArrayList<Player>();
+  //deck??
+
+  public Game(String name) {
+    this.name = name;
+  }
+
+  public void addPlayer(Player p) {
+    players.add(p);
+  }
+
 }

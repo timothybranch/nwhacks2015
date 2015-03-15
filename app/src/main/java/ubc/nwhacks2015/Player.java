@@ -12,9 +12,9 @@ public class Player { // needed to pass objects from one activity to another
 
     private String name;
     private int points;
-    private ArrayList<CardWhite> hand;  //set 0
+    private ArrayList<CardWhite> hand = new ArrayList<CardWhite>();  //set 0
     private boolean isCzar;
-    private ArrayList<CardWhite> deck;  //set 1
+    private ArrayList<CardWhite> deck = new ArrayList<CardWhite>();  //set 1
 
     public Player(){
         points = 0;
