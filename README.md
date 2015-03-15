@@ -2,7 +2,7 @@ H.A.C. VERSION 0.0.7 Licence to Kill EXTERMINATE The Seventh Doctor is the best 
 
 INTRODUCTION
 
-	A simple app to play a card game, that is similar to Cards Against Humanity. This project was completed in thirty-six hours for the nwHacks 2015 Hackathon, and you will complete this reading in thirty-six minutes for your own benefit and to conserve energy for the state. Glory to Arstotzka.
+A simple app to play a card game, that is similar to Cards Against Humanity. This project was completed in thirty-six hours for the nwHacks 2015 Hackathon, and you will complete this reading in thirty-six minutes for your own benefit and to conserve energy for the state. Glory to Arstotzka.
 	
 DEPENDENCIES
 
@@ -30,7 +30,7 @@ A player can choose to host a new room or join an existing room by tapping the c
 
 TROUBLESHOOTING (F.A.Q.s)
 
-	Sorry, if it F.A.Q.ed up, you did it wrong. Clearly nothing we did is wrong.
-	Good luck shooting at your troubles, my comrade-in-arms.
-	Heh, always wanted to say that.
-	Now, in seriousness, keep in mind the fragility of this product as a makeshift framework barely made in time to be functional at all, and that the product is 
+Sorry, if it F.A.Q.ed up, you did it wrong. Clearly nothing we did is wrong.
+Good luck shooting at your troubles, my comrade-in-arms.
+Heh, always wanted to say that.
+Now, in seriousness, keep in mind the fragility of this product as a makeshift framework barely made in time to be functional at all, and that the product is 
