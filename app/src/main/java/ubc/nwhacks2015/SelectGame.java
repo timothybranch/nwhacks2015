@@ -9,8 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.firebase.client.Firebase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 // gets all nearby games and joins one
 public class SelectGame extends ActionBarActivity {
+    Firebase fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,8 @@ public class SelectGame extends ActionBarActivity {
                 startActivityForResult(joinGame, 0);
             }
         });
+        Firebase.setAndroidContext(this);
+        fb = new Firebase("https://cardsagainsthumanity.firebaseio.com/");
     }
 
 
@@ -52,5 +60,8 @@ public class SelectGame extends ActionBarActivity {
         EditText text = (EditText) findViewById(R.id.name);
         String name = text.getText().toString();
         Player player = new Player(name);
+        Map<String, Player> newplayer = new HashMap<String, Player>();
+        newplayer.put(player.getName(),player);
+        fb.setValue(newplayer);
     }
 }
