@@ -1,5 +1,6 @@
 package ubc.nwhacks2015;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,9 +9,13 @@ import android.view.MenuItem;
 
 public class GameRoom extends ActionBarActivity {
 
+    private Game myGame;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent i = getIntent();
+        myGame = (Game)i.getSerializableExtra("Game");
         setContentView(R.layout.activity_game_room);
     }
 
