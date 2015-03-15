@@ -1,6 +1,6 @@
-package ubc.nwhacks2015;
+    package ubc.nwhacks2015;
 
-import java.io.Serializable;
+
 import java.util.ArrayList;
 
 /*
@@ -8,71 +8,50 @@ import java.util.ArrayList;
  * Stores data such as hand, whether they are the czar or not, and score.
  */
 
-@SuppressWarnings("serial") //with this annotation we are going to hide compiler warning
 public class Player { // needed to pass objects from one activity to another
 
-    private int myID;
-    private String myName;
-    private boolean isCzar = false;
-    private ArrayList<CardWhite> myHand;
-    private ArrayList<CardWhite> mySelection;
-    private CardWhite myChoice;
-    private int myScore = 0;
-    private Game game;
+    private String name;
+    private int points;
+    private ArrayList<CardWhite> hand;  //set 0
+    private boolean isCzar;
+    private ArrayList<CardWhite> deck;  //set 1
 
-    public Player(int id, String name, ArrayList<CardWhite> startingHand, Game g) {
-        this.myID = id;
-        this.myName = name;
-        this.myHand = startingHand;
-        this.game = g;
+    public Player(){
+        points = 0;
+    }
+    public Player(String name){
+        super();
+        this.name = name;
     }
 
-    public int getID(){
-        return myID;
+    public int getPoints(){
+        return points;
     }
-
+    public void setPoints(int points){
+        this.points = points;
+    }
     public String getName(){
-        return myName;
+        return name;
     }
-
+    public void destroyCard(int index, int set){
+        if (set==0)
+            hand.remove(index);
+        else if (set==1)
+            deck.remove(index);
+    }
     public boolean getCzar(){
         return isCzar;
     }
-
     public ArrayList<CardWhite> getHand(){
-        return myHand;
+        return Hand;
     }
-
-    public ArrayList<CardWhite> getSelection(){
-        return mySelection;
+    public ArrayList<CardWhite> getDeck(){
+        return deck;
     }
-
-    public int getScore(){
-        return myScore;
+    public void addCard(CardWhite card){
+        myHand.add(card);
     }
-
-    public void addPoint(){
-        ++myScore;
+    public void setCzar(boolean b){
+        isCzar = b;
     }
-
-    public void setName(String name){
-        myName = name;
-    }
-
-    public void addCard(CardWhite add){
-        myHand.add(add);
-    }
-
-    public void addSelection(CardWhite add){
-        mySelection.add(add);
-    }
-
-    public void setCzar(boolean bool){
-        isCzar = bool;
-    }
-
-    public CardWhite getChoice(){
-        return myChoice;
-    }
-
 }

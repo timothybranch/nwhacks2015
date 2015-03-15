@@ -1,31 +1,16 @@
 package ubc.nwhacks2015;
 
 /*
- * This class is for cards that the player play.
+ * The answer card.
  */
 
 public class CardWhite {
+    private String text;
 
-    private int myID;
-    private String myVal;
-    private String mySet;
-
-    //Constructed in the Game class
-    public CardWhite(int id, String val, String set){
-        this.myID = id;
-        this.myVal = val;
-        this.mySet = set;
+    public CardWhite(String text){
+        this.text = text;
     }
-
-    public int getId(){
-        return myID;
-    }
-
-    public String getVal(){
-        return myVal;
-    }
-
-    public String getSet(){
-        return mySet;
+    public String getText(){
+        return text;
     }
 }
