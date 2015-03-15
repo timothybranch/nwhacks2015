@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:text="Join Game"
         android:id="@+id/buttonJoin"
-        android:layout_marginTop="99dp"
         android:layout_below="@+id/nameOfGame"
         android:layout_centerHorizontal="true" />
 
@@ -20,22 +19,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Game You Want To Join"
+        android:text="Name of Game"
         android:ems="10"
         android:id="@+id/nameOfGame"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Your Name"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/nameOfGame"
-        android:layout_alignStart="@+id/nameOfGame"
-        android:layout_marginTop="104dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter the name of the game you want to join"
+        android:id="@+id/textView"
+        android:layout_above="@+id/nameOfGame"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

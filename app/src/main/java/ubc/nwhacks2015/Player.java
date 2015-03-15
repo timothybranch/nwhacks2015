@@ -43,13 +43,13 @@ public class Player { // needed to pass objects from one activity to another
         return isCzar;
     }
     public ArrayList<CardWhite> getHand(){
-        return Hand;
+        return hand;
     }
     public ArrayList<CardWhite> getDeck(){
         return deck;
     }
     public void addCard(CardWhite card){
-        myHand.add(card);
+        hand.add(card);
     }
     public void setCzar(boolean b){
         isCzar = b;
