@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:text="Join Game"
         android:id="@+id/buttonJoin"
-        android:layout_marginTop="69dp"
         android:layout_below="@+id/buttonNew"
         android:layout_alignLeft="@+id/buttonNew"
         android:layout_alignStart="@+id/buttonNew" />
@@ -33,7 +32,6 @@
         android:ems="10"
         android:id="@+id/playerName"
         android:layout_above="@+id/buttonNew"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
