@@ -2,7 +2,7 @@ H.A.C. VERSION 0.0.7
 
 INTRODUCTION
 
-A simple app to play a card game, that is similar to Cards Against Humanity. This project was completed in thirty-six hours for the nwHacks 2015 Hackathon, and you will complete this reading in thirty-six minutes for your own benefit and to conserve energy for the state. Glory to Arstotzka.
+A simple app to play a card game, that is similar to Cards Against Humanity. This project was completed in thirty-six hours for the nwHacks 2015 Hackathon, and you will complete this reading in thirty-six minutes for your own benefit and to conserve energy for the state. Glory to Cardstotzka.
 	
 DEPENDENCIES
 
@@ -30,7 +30,7 @@ A player can choose to host a new room or join an existing room by tapping the c
 
 TROUBLESHOOTING (F.A.Q.s)
 
-"Sorry, if it F.A.Q.ed up, you did it wrong. Clearly our gloriously Arstozkan developers cannot be held at fault."
+"Sorry, if it F.A.Q.ed up, you did it wrong. Clearly our gloriously Cardstozkan developers cannot be held at fault."
 Good luck shooting at your troubles, my comrade-in-arms.
 Heh, always wanted to say that.
 Now in all seriousness, please do keep in mind the fragility of this product as a makeshift framework barely made in time to be functional at all, that the product is built without any security or failsafe features at time of writing, that this app runs on the assumption that FireBase is alive and working well, and we will look into tackling security and compatibility issues if we decide to continue this project, and hey--at least we haven't nuked your cities. Yet.
