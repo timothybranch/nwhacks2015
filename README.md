@@ -1,4 +1,4 @@
-H.A.C. VERSION 0.0.7 Licence to Kill EXTERMINATE The Seventh Doctor is the best Doctor
+H.A.C. VERSION 0.0.7
 
 INTRODUCTION
 
