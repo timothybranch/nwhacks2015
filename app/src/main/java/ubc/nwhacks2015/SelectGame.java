@@ -9,9 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.Query;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 // gets all nearby games and joins one
@@ -57,11 +62,48 @@ public class SelectGame extends ActionBarActivity {
     }
 
     public void joinGame(){
+        final Firebase ref = new Firebase("https://cahtest.firebaseio.com/");
+
         EditText text = (EditText) findViewById(R.id.name);
-        String name = text.getText().toString();
+        final String name = text.getText().toString();
         Player player = new Player(name);
-        Map<String, Player> newplayer = new HashMap<String, Player>();
-        newplayer.put(player.getName(),player);
-        fb.setValue(newplayer);
+        Map<String, Player> newPlayer = new HashMap<String, Player>();
+        newPlayer.put(player.getName(), player);
+        fb.setValue(newPlayer);
+        EditText text2 = (EditText) findViewById(R.id.game);
+        final String gameName = text2.getText().toString();
+
+        Query queryRef = ref.equalTo(gameName);
+
+        queryRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot snapshot, String previousChild) {
+                System.out.println(snapshot.getKey());
+
+                //Same thing as hosting a game, where we add a player to the list of Players\
+
+                ref.child(gameName).child("Players").child(players.size()-1+"").setValue(host.getName());
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
     }
 }

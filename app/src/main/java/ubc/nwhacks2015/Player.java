@@ -18,14 +18,14 @@ public class Player { // needed to pass objects from one activity to another
 
     private String name;
     private int points;
-    private ArrayList<CardWhite> hand;
+    private ArrayList<CardWhite> hand = new ArrayList<CardWhite>();
     private boolean isCzar;
-    private ArrayList<CardWhite> deck;
+    private ArrayList<CardWhite> deck = new ArrayList<CardWhite>();
 
     public Player() throws FileNotFoundException {
         points = 0;
         loadDeck();
-        createHand();
+        createHand(7);
     }
     public Player(String name){
         super();
@@ -63,8 +63,8 @@ public class Player { // needed to pass objects from one activity to another
         isCzar = b;
     }
 
-    public void createHand(){
-        for (int i = 0; i < 7; i++)
+    public void createHand(int size){
+        for (int i = 0; i < size; i++)
             hand.add(deck.get(R.nextInt(deck.size())));
     }
 

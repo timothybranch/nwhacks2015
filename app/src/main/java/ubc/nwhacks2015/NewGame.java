@@ -21,10 +21,15 @@ public class NewGame extends ActionBarActivity {
             public void onClick(View view) {
                 // new game initialized here
                 Intent newGame = new Intent(view.getContext(), WaitingRoom.class);
-                startActivityForResult(newGame, 0);
+
                 EditText nameOfGame = (EditText) findViewById(R.id.nameOfGame);
+                EditText playerName = (EditText) findViewById(R.id.hostName);
                 String name = nameOfGame.getText().toString();
-                Game myGame = new Game(name);
+                String host = playerName.getText().toString();
+                Player player = new Player(host);
+                Game myGame = new Game(name,player);
+                newGame.putExtra("Game", myGame);
+                startActivityForResult(newGame, 0);
             }
         });
     }

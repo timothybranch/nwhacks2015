@@ -6,32 +6,34 @@ package ubc.nwhacks2015;
  */
 
 import com.firebase.client.*;
+import java.util.ArrayList;
 
 import java.io.Serializable;
 
-public class Game {
-  private String name;
-  public Game(String name) {
-      this.name = name;
+public class Game implements Serializable{
+    private String name;
+    private ArrayList<Player> players = new ArrayList<Player>();
 
-      Firebase myFirebaseRef = new Firebase("https://cahtest.firebaseio.com/");
+    public Game(String gameName, Player host) {
+        this.name = gameName;
 
-      String gameName = "Game Name";
+        players.add(host);
 
-      String player1 = "Joey Li";
-      String player2 = "Tim Branch";
+        Firebase ref = new Firebase("https://cahtest.firebaseio.com/");
 
-      myFirebaseRef.child(gameName).child(player1).child("Cards").push();
+        ref.child(name).child("Players").child(players.size()-1+"").setValue(host.getName());
+//        for (int i = 0; i < players.get(0).getHand().size(); ++i){
+//            ref.child(name).child(players.get(0).getName()).child("Cards").child(""+i).setValue(host.getHand().get(i).getText());
+//        }
 
-      myFirebaseRef.child(gameName).child(player2).child("saturday").addValueEventListener(new ValueEventListener() {
+    }
 
-          @Override
-          public void onDataChange(DataSnapshot snapshot) {
-              System.out.println(snapshot.getValue());  //prints "Do you have data? You'll love Firebase."
-          }
+    public void addPlayer(Player newPlayer){
+        players.add(newPlayer);
 
-          @Override public void onCancelled(FirebaseError error) { }
+        Firebase ref = new Firebase("https://cahtest.firebaseio.com/");
 
-      });
-  }
+        ref.child(name).child("Players").child(players.size()-1+"").setValue(newPlayer.getName());
+    }
+
 }
