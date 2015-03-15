@@ -11,20 +11,9 @@
         android:layout_height="wrap_content"
         android:text="Create Game"
         android:id="@+id/buttonCreate"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/nameOfGame"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="94dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Your Name"
-        android:ems="10"
-        android:id="@+id/editHostName"
-        android:layout_marginTop="161dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="109dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -33,8 +22,8 @@
         android:text="Name of the Game"
         android:ems="10"
         android:id="@+id/nameOfGame"
+        android:layout_marginTop="174dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
