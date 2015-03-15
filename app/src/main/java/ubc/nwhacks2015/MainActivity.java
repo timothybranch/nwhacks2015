@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         Button buttonJoin = (Button) findViewById(R.id.buttonJoin);
         buttonJoin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent joinGame = new Intent(view.getContext(), NewPlayer.class);
+                Intent joinGame = new Intent(view.getContext(), SelectGame.class);
                 startActivityForResult(joinGame, 0);
             }
         });
