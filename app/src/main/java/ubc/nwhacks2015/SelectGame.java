@@ -46,4 +46,8 @@ public class SelectGame extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void joinGame(){
+
+    }
 }
