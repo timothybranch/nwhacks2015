@@ -7,37 +7,52 @@
     tools:context="ubc.nwhacks2015.SelectGame"
     android:id="@+id/selectGame">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Your Name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Join Game"
         android:id="@+id/buttonJoin"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="93dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Your Name"
-        android:ems="10"
-        android:id="@+id/nameOfHost"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp" />
+        android:id="@+id/name"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Game you Wish to Join"
-        android:ems="10"
-        android:id="@+id/nameOfGame"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Join a Game"
+        android:id="@+id/textView4"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/nameOfHost"
-        android:layout_alignStart="@+id/nameOfHost"
-        android:layout_alignRight="@+id/nameOfHost"
-        android:layout_alignEnd="@+id/nameOfHost" />
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/game"
+        android:layout_below="@+id/textView4"
+        android:layout_alignRight="@+id/name"
+        android:layout_alignEnd="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
 
 </RelativeLayout>

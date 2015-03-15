@@ -8,9 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.firebase.client.Firebase;
+
 
 public class MainActivity extends ActionBarActivity {
-
+    Firebase fb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,9 @@ public class MainActivity extends ActionBarActivity {
                 startActivityForResult(joinGame, 0);
             }
         });
+        Firebase.setAndroidContext(this);
+        fb = new Firebase("https://cardsagainsthumanity.firebaseio.com/");
+        fb.removeValue();
     }
 
 
