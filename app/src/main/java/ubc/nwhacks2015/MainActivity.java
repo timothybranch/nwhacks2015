@@ -32,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivityForResult(joinGame, 0);
             }
         });
+        //move this text below to wherever you want to erase all data
         Firebase.setAndroidContext(this);
         fb = new Firebase("https://cardsagainsthumanity.firebaseio.com/");
         fb.removeValue();
