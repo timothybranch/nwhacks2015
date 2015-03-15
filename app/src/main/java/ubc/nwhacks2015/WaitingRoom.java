@@ -42,6 +42,8 @@ public class WaitingRoom extends ActionBarActivity {
             public void onClick(View view) {
                 Intent startGame = new Intent(view.getContext(), GameRoom.class);
                 startGame.putExtra("Game", myGame);
+                String host = (String) getIntent().getSerializableExtra("String");
+                startGame.putExtra("String", host);
                 startActivityForResult(startGame, 0);
             }
         });

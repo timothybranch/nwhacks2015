@@ -10,6 +10,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView.OnItemClickListener;
+import android.view.View;
 
 
 public class GameRoom extends ActionBarActivity {
@@ -21,12 +27,37 @@ public class GameRoom extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Intent i = getIntent();
         myGame = (Game)i.getSerializableExtra("Game");
-        setContentView(R.layout.activity_game_room);
-        try {
-            makeBlackDeck();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        Player me = (Player) i.getSerializableExtra("Player");
+        if(me.getCzar()) {
+            Intent czar = new Intent(this, CardCzar.class);
+            startActivityForResult(czar, 0);
         }
+        setContentView(R.layout.activity_game_room);
+
+
+
+        TextView blackCard = (TextView) findViewById(R.id.blackCard);
+        blackCard.setText(blackDeck.get(0).getText());
+        final ListView listDeck = (ListView) findViewById(R.id.listDeck);
+        ArrayList<String> cards = new ArrayList<String>();
+        for(CardWhite c : me.getDeck()) {
+            cards.add(c.getText());
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, cards);
+        listDeck.setAdapter(adapter);
+        TextView textPoints = (TextView) findViewById(R.id.textPoints);
+        textPoints.setText(me.getPoints());
+
+        //String selectedCard;
+
+        listDeck.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int itemPosition = position;
+                String selectedCard  = (String) listDeck.getItemAtPosition(position);
+            }
+        });
+        // Send this string to the card czar lol have fun
     }
 
 

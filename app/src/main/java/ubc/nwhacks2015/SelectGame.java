@@ -31,6 +31,9 @@ public class SelectGame extends ActionBarActivity {
         buttonJoin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent joinGame = new Intent(view.getContext(), PlayerWaitingRoom.class);
+                EditText name = (EditText) findViewById(R.id.name);
+                String playerName = name.getText().toString();
+                joinGame.putExtra("String", playerName);
                 startActivityForResult(joinGame, 0);
             }
         });

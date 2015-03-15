@@ -29,6 +29,7 @@ public class NewGame extends ActionBarActivity {
                 Player player = new Player(host);
                 Game myGame = new Game(name,player);
                 newGame.putExtra("Game", myGame);
+                newGame.putExtra("String", host);
                 startActivityForResult(newGame, 0);
             }
         });

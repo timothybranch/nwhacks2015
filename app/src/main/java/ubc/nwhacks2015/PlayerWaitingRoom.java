@@ -1,5 +1,6 @@
 package ubc.nwhacks2015;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +14,10 @@ public class PlayerWaitingRoom extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_waiting_room);
+
+        Intent startGame = new Intent(this, GameRoom.class); //IDK THIS NEEDS TO BE WHEREVER THE SCREEN CHANGE HAPPENS
+        String host = (String) getIntent().getSerializableExtra("String");
+        startGame.putExtra("String", host);
     }
 
 
