@@ -36,4 +36,8 @@ public class Game implements Serializable{
         ref.child(name).child("Players").child(players.size()-1+"").setValue(newPlayer.getName());
     }
 
+    public String getName(){
+        return name;
+    }
+
 }
