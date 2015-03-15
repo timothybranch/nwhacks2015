@@ -8,9 +8,8 @@ public class CardBlack {
     private String text;
     private int blanks;
 
-    public CardBlack(String text, int blanks){
+    public CardBlack(String text){
         this.text = text;
-        this.blanks = blanks;
     }
 
     public String getText(){
