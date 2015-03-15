@@ -12,29 +12,44 @@
         android:text="Create Game"
         android:id="@+id/buttonCreate"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="92dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name of the Game"
         android:ems="10"
         android:id="@+id/nameOfGame"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView8"
         android:layout_alignLeft="@+id/hostName"
-        android:layout_alignStart="@+id/hostName"
-        android:layout_marginTop="87dp" />
+        android:layout_alignStart="@+id/hostName" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Your Name"
         android:ems="10"
         android:id="@+id/hostName"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Your Name"
+        android:id="@+id/textView7"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name of New Game"
+        android:id="@+id/textView8"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
 
 </RelativeLayout>
