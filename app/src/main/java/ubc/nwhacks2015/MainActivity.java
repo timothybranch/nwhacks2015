@@ -8,9 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.firebase.client.Firebase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class MainActivity extends ActionBarActivity {
-
+    Firebase fb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,21 @@ public class MainActivity extends ActionBarActivity {
                 startActivityForResult(joinGame, 0);
             }
         });
+        //move this text below to wherever you want to erase all data
+//        Firebase.setAndroidContext(this);
+//        fb = new Firebase("https://cardsagainsthumanity.firebaseio.com/");
+//        fb.removeValue();
+        Firebase.setAndroidContext(this);
+        Firebase fb = new Firebase("https://cardsagainsthumanity.firebaseio.com/");
+        Player joey = new Player("joey");
+        Player tim = new Player("tim");
+
+        Map<String, Player> players = new HashMap<String, Player>();
+        players.put("joey", joey);
+        players.put("tim", tim);
+
+        fb.setValue(players);
+
     }
 
 
