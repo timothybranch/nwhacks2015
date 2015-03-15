@@ -1,4 +1,4 @@
-    package ubc.nwhacks2015;
+package ubc.nwhacks2015;
 
 
 import java.util.ArrayList;
